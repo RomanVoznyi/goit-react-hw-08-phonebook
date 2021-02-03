@@ -1,0 +1,25 @@
+.unknownViewBox {
+  padding: 10px;
+  border: 1px dotted $accent-color;
+  border-radius: 10px;
+  background-color: $azure-bg-color;
+  text-align: center;
+  color: $accent-color;
+}
+
+.unknownTitle {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.unknownLogo {
+  @extend .navLogoBackground;
+  display: inline-flex;
+  margin: 0;
+}
+
+.unknownImage {
+  width: 250px;
+  min-height: 160px;
+  margin-bottom: 20px;
+}

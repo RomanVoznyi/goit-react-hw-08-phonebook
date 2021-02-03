@@ -1,0 +1,65 @@
+.navBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include flex(left);
+  width: 100%;
+  padding: 10px 20px 15px;
+  z-index: 2;
+
+  text-shadow: $main-shadow;
+  color: $light-blue-color;
+  background-color: $azure-color;
+  border-bottom: 1px solid $border-shadow;
+  box-shadow: $nav-shadow;
+}
+
+.link {
+  color: inherit;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    color: red;
+  }
+}
+
+.activeLink {
+  border-bottom: 2px solid $light-blue-color;
+}
+
+.navLogoBackground {
+  @extend .logoBackground;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  padding: 2px;
+}
+
+.logo {
+  color: $accent-color;
+}
+
+.authBar {
+  @include flex(left);
+  margin-left: auto;
+}
+
+.avatar {
+  margin-right: 5px;
+  color: $accent-color;
+}
+
+.greeting {
+  margin-right: 5px;
+}
+
+.userName {
+  font: inherit;
+  font-weight: 500;
+  color: $accent-color;
+  text-transform: uppercase;
+}
