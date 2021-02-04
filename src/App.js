@@ -7,6 +7,7 @@ import { getFetchingStatus, getErrorStatus } from 'redux/auth/auth-selector';
 import { ToastContainer } from 'react-toastify';
 import Loader from 'react-loader-spinner';
 import { Copyright } from '@material-ui/icons';
+import { GiCrownedHeart } from 'react-icons/gi';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 const HomeView = lazy(() =>
@@ -77,8 +78,9 @@ const App = () => {
       </div>
 
       <div className="footer">
-        <Copyright className="copyRigths" style={{ fontSize: 16 }} /> Created by
-        RV | 2021
+        <Copyright id="icon-copyRigths" />
+        Created by RV | 2021
+        <GiCrownedHeart id="icon-heart" />
       </div>
     </div>
   );

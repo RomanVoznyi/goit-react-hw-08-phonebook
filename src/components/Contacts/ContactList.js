@@ -17,7 +17,7 @@ const ContactList = () => {
     <ul className="contacsList">
       {contacts.map(({ id, name, number }) => (
         <li key={id} className="contactItem">
-          <MdAccountCircle className="box1" />
+          <MdAccountCircle id="mdAccount" className="box1" />
           <span className="contactName box2">{name}</span>
           <span className="contactNumber box3">{number}</span>
           <button

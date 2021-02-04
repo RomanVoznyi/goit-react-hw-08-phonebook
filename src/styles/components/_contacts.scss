@@ -1,6 +1,10 @@
 .myPhonebook {
   padding: 10px;
-  width: 320px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: left;
+
   border-radius: 4px;
   box-shadow: $main-shadow;
   background-image: $phonebook-bg-color, url(../../images/mobile-phone.jpg);
@@ -48,6 +52,7 @@
 }
 
 .subFormInput {
+  width: 100%;
   padding: 10px;
 
   border: 1px solid $white-color;
@@ -91,7 +96,24 @@
 .contacsList {
   @extend .subForm;
   min-height: 100px;
+  max-height: 220px;
+  overflow: hidden;
+  overflow-y: scroll;
   color: $white-color;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $azure-bg-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $light-blue-color;
+    border-radius: 20px;
+    border: 1px solid $azure-bg-color;
+  }
 }
 
 .contactItem {
@@ -126,6 +148,10 @@
   grid-column-start: 3;
   grid-row-start: 1;
   grid-row-end: 3;
+}
+
+#mdAccount {
+  font-size: 22px;
 }
 
 .contactName {

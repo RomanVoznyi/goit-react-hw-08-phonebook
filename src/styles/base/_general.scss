@@ -39,6 +39,20 @@ img {
   height: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  border: none;
+  overflow: hidden;
+}
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -72,6 +86,7 @@ img {
   width: 100%;
   min-height: calc(100vh - 109px);
   padding: 10px;
+  text-align: center;
 
   @media screen and (min-width: $tablet) {
     @include flex();
@@ -89,25 +104,25 @@ img {
   text-shadow: $main-shadow;
 }
 
-.copyRigths {
+#icon-copyRigths {
   margin-right: 5px;
-  font-size: inherit;
+  font-size: 16px;
 }
 
-// .icon-heart {
-//   margin-right: 10px;
-//   margin-left: 10px;
+#icon-heart {
+  margin-left: 10px;
+  color: $accent-color;
 
-//   animation-name: beat;
-//   animation-duration: 1.5s;
-//   animation-iteration-count: infinite;
-// }
+  animation-name: beat;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
 
-// @keyframes beat {
-//   0% {
-//     transform: scale(1);
-//   }
-//   50% {
-//     transform: scale(0.6);
-//   }
-// }
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+}
