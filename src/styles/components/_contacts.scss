@@ -25,14 +25,13 @@
 }
 
 .subForm {
-  padding: 10px;
+  padding: 5px 10px;
   margin-bottom: 5px;
   border: 1px solid $white-color;
   border-radius: 5px;
 }
 
 .subFormTitle {
-  margin-bottom: 10px;
   font-size: 16px;
   color: $white-color;
 }
@@ -51,14 +50,30 @@
   color: $white-color;
 }
 
+.openSubFormBox {
+  @include flex(left);
+}
+
+.arrowBox {
+  margin-left: auto;
+  padding: 10px 0;
+  color: $azure-color;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($color: $azure-bg-color, $alpha: 0.2);
+  }
+}
+
 .subFormInput {
   width: 100%;
-  padding: 10px;
+  height: 35px;
+  padding: 0 10px;
 
   border: 1px solid $white-color;
   border-radius: 5px;
   font-size: 16px;
-  font-weight: 500;
+  letter-spacing: 0.01rem;
   outline: none;
 
   &::placeholder {
@@ -68,6 +83,23 @@
 
   &:focus::placeholder {
     opacity: 0;
+  }
+}
+
+.react-tel-input {
+  & .phoneNumberClass {
+    width: 100%;
+    font: inherit;
+    font-style: normal;
+
+    &::placeholder {
+      opacity: 1;
+      @include transition(opacity);
+    }
+
+    &:focus::placeholder {
+      opacity: 0;
+    }
   }
 }
 
